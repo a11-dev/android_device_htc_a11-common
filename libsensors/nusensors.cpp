@@ -55,7 +55,7 @@ private:
 
     int handleToDriver(int handle) const {
         switch (handle) {
-            case SENSOR_TYPE_ACCELEROMETER:
+            case ID_A:
             	return bma250;
         }
         return -EINVAL;

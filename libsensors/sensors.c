@@ -25,14 +25,18 @@
  */
 
 static const struct sensor_t sSensorList[] = {
-        { "BMA250 3-axis Accelerometer",
-          "Bosch Sensortec GmbH",
-          1, SENSORS_HANDLE_BASE+ID_A,
-          SENSOR_TYPE_ACCELEROMETER,
-          (16.0f*GRAVITY_EARTH),
-          (16.0f*GRAVITY_EARTH)/4096,
-          0.003f,
-          0, { } },
+	{
+		.name		= "BMA250 3-axis Accelerometer",
+		.vendor		= "Bosch Sensortec GmbH",
+          	.version	= 1,
+		.handle		= SENSORS_HANDLE_BASE+ID_A,
+		.type		= SENSOR_TYPE_ACCELEROMETER,
+		.maxRange	= (16.0f*GRAVITY_EARTH),
+		.resolution	= (16.0f*GRAVITY_EARTH)/4096,
+		.power		= 0.003f,
+		.minDelay	= 0,
+		.reserved	= { }
+	}
 };
 
 static int open_sensors(const struct hw_module_t* module, const char* name,

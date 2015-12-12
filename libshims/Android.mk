@@ -13,6 +13,9 @@
 # limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
+
+# htc logging symbols
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -24,6 +27,7 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 include $(BUILD_SHARED_LIBRARY)
 
 # libqc-opt
+
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -31,6 +35,19 @@ LOCAL_SRC_FILES := \
 
 LOCAL_SHARED_LIBRARIES := libicuuc libicui18n
 LOCAL_MODULE := libshim_qcopt
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+# sensors
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := \
+    sensors.c \
+    VectorImpl.c
+
+LOCAL_MODULE := libshim_sensors
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)

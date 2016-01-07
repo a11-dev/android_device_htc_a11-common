@@ -181,6 +181,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     power.msm8226
 
+# Shim
+PRODUCT_PACKAGES += \
+    libshim_qcopt
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \

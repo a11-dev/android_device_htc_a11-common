@@ -44,8 +44,12 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-    sensors.c \
-    VectorImpl.c
+     sensors.c \
+     SharedBuffer.cpp \
+     VectorImpl.cpp
+
+LOCAL_C_INCLUDES += external/safe-iop/include
+LOCAL_SHARED_LIBRARIES := liblog
 
 LOCAL_MODULE := libshim_sensors
 LOCAL_MODULE_TAGS := optional

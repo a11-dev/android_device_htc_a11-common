@@ -20,7 +20,7 @@
 # definition file).
 #
 
-LOCAL_PATH := device/htc/a5-common
+LOCAL_PATH := device/htc/a11-common
 
 BOARD_VENDOR := htc
 
@@ -49,7 +49,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-TARGET_KERNEL_CONFIG := cm_a5_defconfig
+TARGET_KERNEL_CONFIG := cm_a11_defconfig
 
 # Enable dex-preoptimization to speed up first boot sequence
 ifeq ($(HOST_OS),linux)
@@ -141,19 +141,19 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USES_MMCUTILS := true
-TARGET_RECOVERY_DEVICE_DIRS += device/htc/a5-common
+TARGET_RECOVERY_DEVICE_DIRS += device/htc/a11-common
 TARGET_RECOVERY_DEVICE_MODULES += chargeled
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += device/htc/a5-common/sepolicy
+BOARD_SEPOLICY_DIRS += device/htc/a11-common/sepolicy
 
 # Hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += \
-    device/htc/a5-common/cmhw \
+    device/htc/a11-common/cmhw \
     hardware/cyanogen/cmhw
 
 # inherit from the proprietary version
--include vendor/htc/a5-common/BoardConfigVendor.mk
+-include vendor/htc/a11-common/BoardConfigVendor.mk

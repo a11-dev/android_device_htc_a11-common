@@ -1,5 +1,5 @@
 #
-# Common system properties for a5
+# Common system properties for a11
 #
 
 # RIL

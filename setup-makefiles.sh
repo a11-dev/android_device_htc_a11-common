@@ -35,10 +35,10 @@ if [ -f ../$DEVICE/device-proprietary-files.txt ]; then
 fi
 
 LINEEND=" \\"
-COUNT=`wc -l ../a5-common/proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../a5-common/proprietary-files.txt`
+COUNT=`wc -l ../a11-common/proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../a11-common/proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../a5-common/proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../a11-common/proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [[ ! "$FILE" =~ ^-.* ]]; then
     echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
@@ -121,7 +121,7 @@ endif
 
 EOF
 
-export DEVICE=a5-common
+export DEVICE=a11-common
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 
@@ -146,10 +146,10 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`wc -l ../a5-common/common-proprietary-files.txt | awk {'print $1'}`
-DISM=`egrep -c '(^#|^$)' ../a5-common/common-proprietary-files.txt`
+COUNT=`wc -l ../a11-common/common-proprietary-files.txt | awk {'print $1'}`
+DISM=`egrep -c '(^#|^$)' ../a11-common/common-proprietary-files.txt`
 COUNT=`expr $COUNT - $DISM`
-for FILE in `egrep -v '(^#|^$)' ../a5-common/common-proprietary-files.txt`; do
+for FILE in `egrep -v '(^#|^$)' ../a11-common/common-proprietary-files.txt`; do
   COUNT=`expr $COUNT - 1`
   if [[ ! "$FILE" =~ ^-.* ]]; then
     echo "        $OUTDIR/proprietary/$FILE:/system/$FILE$LINEEND" >> $MAKEFILE
@@ -218,7 +218,7 @@ EOF
 
 LOCAL_PATH := \$(call my-dir)
 
-ifneq (\$(filter a5ul a5dwg,\$(TARGET_DEVICE)),)
+ifneq (\$(filter a11ul a11chl,\$(TARGET_DEVICE)),)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libtime_genoff

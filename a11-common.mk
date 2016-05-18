@@ -44,8 +44,7 @@ PRODUCT_PACKAGES += \
 # Qcom init scripts for /etc
 PRODUCT_PACKAGES += \
     init.qcom.bt.bluedroid.sh \
-    init.qcom.bt.sh \
-    init.qcom.ril.sh
+    init.qcom.bt.sh
 
 # Permissions
 PRODUCT_COPY_FILES += \

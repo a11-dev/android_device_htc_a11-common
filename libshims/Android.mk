@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Copyright (C) 2015 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,7 +27,7 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
-     icu53.c
+    icu53.c
 
 LOCAL_SHARED_LIBRARIES := libicuuc libicui18n
 LOCAL_MODULE := libshim_qcopt

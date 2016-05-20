@@ -40,8 +40,6 @@ vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libaudcal.so
 vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
 
 # Bluetooth
 bin/hci_qcomm_init
@@ -69,40 +67,22 @@ lib/libmmjpeg_interface.so
 lib/libposteffect.so
 lib/libqomx_core.so
 lib/libtuning_aec.so
-lib/libtuning_aec_ov13850_hdr.so
-lib/libtuning_aec_ov13850_hdr_16_9.so
-lib/libtuning_aec_ov13850_night.so
-lib/libtuning_aec_ov13850_night_16_9.so
-lib/libtuning_aec_ov13850_video.so
-lib/libtuning_aec_ov13850_videoHFR.so
-lib/libtuning_aec_ov13850_video_60fps.so
-lib/libtuning_aec_ov13850_zoe.so
-lib/libtuning_aec_ov13850_zsl.so
-lib/libtuning_aec_ov13850_zsl_16_9.so
-lib/libtuning_aec_s5k5e_onelane_hdr.so
-lib/libtuning_aec_s5k5e_onelane_hdr_16_9.so
-lib/libtuning_aec_s5k5e_onelane_video.so
-lib/libtuning_aec_s5k5e_onelane_video_16_9.so
-lib/libtuning_aec_s5k5e_onelane_zsl.so
-lib/libtuning_aec_s5k5e_onelane_zsl_16_9.so
+lib/libtuning_aec_s5k5e2_twolane_hdr.so
+lib/libtuning_aec_s5k5e2_twolane_hdr_16_9.so
+lib/libtuning_aec_s5k5e2_twolane_video.so
+lib/libtuning_aec_s5k5e2_twolane_videoHFR.so
+lib/libtuning_aec_s5k5e2_twolane_video_60fps.so
+lib/libtuning_aec_s5k5e2_twolane_zsl.so
+lib/libtuning_aec_s5k5e2_twolane_zsl_16_9.so
 lib/libtuning_af.so
-lib/libtuning_af_ti201_ov13850.so
-lib/libtuning_af_ti201_ov13850_otp.so
-lib/libtuning_awb_ov13850.so
-lib/libtuning_awb_s5k5e_onelane.so
-vendor/lib/libchromatix_ov13850_common.so
-vendor/lib/libchromatix_ov13850_default_video.so
-vendor/lib/libchromatix_ov13850_hdr.so
-vendor/lib/libchromatix_ov13850_hfr.so
-vendor/lib/libchromatix_ov13850_hfr_60fps.so
-vendor/lib/libchromatix_ov13850_preview.so
-vendor/lib/libchromatix_ov13850_qtr.so
-vendor/lib/libchromatix_ov13850_zoe.so
-vendor/lib/libchromatix_s5k5e_onelane_common.so
-vendor/lib/libchromatix_s5k5e_onelane_default_video.so
-vendor/lib/libchromatix_s5k5e_onelane_hdr.so
-vendor/lib/libchromatix_s5k5e_onelane_preview.so
-vendor/lib/libchromatix_s5k5e_onelane_video_16_9.so
+lib/libtuning_awb_s5k5e2_twolane.so
+lib/libtuning_awb_s5k6a1gx.so
+vendor/lib/libchromatix_s5k5e2_twolane_common.so
+vendor/lib/libchromatix_s5k5e2_twolane_default_video.so
+vendor/lib/libchromatix_s5k5e2_twolane_hdr.so
+vendor/lib/libchromatix_s5k5e2_twolane_hfr.so
+vendor/lib/libchromatix_s5k5e2_twolane_hfr_60fps.so
+vendor/lib/libchromatix_s5k5e2_twolane_preview.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera2_c2d_module.so
@@ -120,8 +100,7 @@ vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_hdr_gb_lib.so
 vendor/lib/libmmcamera_hdr_lib.so
 vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_ov13850.so
-vendor/lib/libmmcamera_s5k5e_onelane.so
+vendor/lib/libmmcamera_s5k5e2_twolane.so
 vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_wavelet_lib.so
@@ -139,8 +118,6 @@ lib/libloc_api_v02.so
 lib/libloc_core.so
 lib/libloc_ds_api.so
 lib/libloc_eng.so
-vendor/lib/hw/flp.default.so
-vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -186,20 +163,14 @@ vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
-# Perf
-vendor/lib/libqti-perfd-client.so
-
 # Power
 bin/mpdecision
-vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 
 # Sensors
-bin/akmd
 lib/hw/sensors.msm8226.so
 
 # Time
--app/TimeService/TimeService.apk
 bin/time_daemon
 -vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
@@ -221,13 +192,12 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
-vendor/firmware/keymaster/keymaster.b00
-vendor/firmware/keymaster/keymaster.b01
-vendor/firmware/keymaster/keymaster.b02
-vendor/firmware/keymaster/keymaster.b03
-vendor/firmware/keymaster/keymaster.mdt
+vendor/firmware/keymaster.b00
+vendor/firmware/keymaster.b01
+vendor/firmware/keymaster.b02
+vendor/firmware/keymaster.b03
+vendor/firmware/keymaster.mdt
 vendor/lib/libQSEEComAPI.so
-vendor/lib/libdrmdiag.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/librpmb.so
@@ -246,5 +216,4 @@ vendor/lib/libSHIMDivxDrm.so
 vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libwvm.so
-vendor/lib/mediadrm/libdrmclearkeyplugin.so
 vendor/lib/mediadrm/libwvdrmengine.so

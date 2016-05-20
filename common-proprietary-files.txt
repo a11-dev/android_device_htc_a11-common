@@ -175,6 +175,9 @@ bin/time_daemon
 -vendor/lib/libTimeService.so
 -vendor/lib/libtime_genoff.so
 
+# Ril
+lib/libril.so
+
 # TrustZone
 bin/qseecomd
 etc/firmware/cmnlib.b00

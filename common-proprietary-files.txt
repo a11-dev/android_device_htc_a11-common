@@ -195,11 +195,11 @@ etc/firmware/dxhdcp2.b01
 etc/firmware/dxhdcp2.b02
 etc/firmware/dxhdcp2.b03
 etc/firmware/dxhdcp2.mdt
-vendor/firmware/keymaster.b00
-vendor/firmware/keymaster.b01
-vendor/firmware/keymaster.b02
-vendor/firmware/keymaster.b03
-vendor/firmware/keymaster.mdt
+vendor/firmware/keymaster/keymaster.b00
+vendor/firmware/keymaster/keymaster.b01
+vendor/firmware/keymaster/keymaster.b02
+vendor/firmware/keymaster/keymaster.b03
+vendor/firmware/keymaster/keymaster.mdt
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so

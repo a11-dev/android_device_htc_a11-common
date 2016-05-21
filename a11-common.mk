@@ -25,8 +25,8 @@ $(call inherit-product-if-exists, vendor/htc/a11-common/a11-common-vendor.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 854
+TARGET_SCREEN_WIDTH := 480
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal

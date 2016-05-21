@@ -56,7 +56,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.hwc.mdpcomp.enable=true \
-    ro.sf.lcd_density=320 \
+    ro.sf.lcd_density=225 \
     ro.opengles.version=196608
 
 # Input

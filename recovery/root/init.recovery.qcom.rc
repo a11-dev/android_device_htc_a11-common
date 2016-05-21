@@ -14,7 +14,6 @@ on boot
     write /sys/module/msm_pm/modes/cpu2/standalone_power_collapse/idle_enabled 1
     write /sys/module/msm_pm/modes/cpu3/standalone_power_collapse/idle_enabled 1
     write /sys/module/msm_pm/modes/cpu0/power_collapse/idle_enabled 1
-    start chargeled
     setprop recovery.perf.mode 0
 
 on property:sys.usb.config=none
@@ -31,11 +30,6 @@ on property:sys.usb.config=mtp,adb
 
 on charger
     start choice_fn
-    start chargeled
-
-service chargeled /sbin/chargeled
-    disabled
-    seclabel u:r:healthd:s0
 
 service choice_fn /sbin/choice_fn
     disabled

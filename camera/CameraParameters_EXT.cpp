@@ -146,8 +146,8 @@ int CameraParameters_EXT::get_from_attr(const char *path, char *buf, size_t len)
 
 bool CameraParameters_EXT::check_flashlight_restriction()
 {
-    /* Just lie and always say we are able to use the flashlight */
-    return false;
+    /* We have no flashlight */
+    return true;
 }
 
 int CameraParameters_EXT::lookupAttr(/* CameraParameters_EXT::CameraMap const* */

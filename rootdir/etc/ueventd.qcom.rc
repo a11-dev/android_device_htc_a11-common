@@ -158,8 +158,7 @@
 
 # wlan
 /dev/wcnss_wlan           0660   system     system
-#nfc permissions
-/dev/nfc-nci              0660    nfc         nfc
+/dev/wcnss_ctrl           0660   system     system
 
 # HtcCarGPS
 /dev/ttyHSUSB1                                 0600    system  system

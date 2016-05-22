@@ -708,6 +708,17 @@ public:
     static const char CONTI_BURST_CAPTURING[];
     static const char CONTI_BURST_CAPTURE_DONE[];
     static const char KEY_FORCE_USE_AUDIO_ENABLED[];
+    static const char KEY_CONTIBURST_TYPE[];
+    static const char KEY_CAPTURE_MODE[];
+    static const char KEY_SUPPORTED_CAPTURE_MODES[]; 
+    static const char CAPTURE_MODE_NORMAL[];
+    static const char CAPTURE_MODE_CONTI_ZOE[];
+    static const char CAPTURE_MODE_CONTI_BURST[];
+    static const char CAPTURE_MODE_CONTI_BURST_ONE_SHOT[];
+    static const char CAPTURE_MODE_HDR[];
+    static const char CAPTURE_MODE_PANORAMA[];
+    static const char CAPTURE_MODE_ZOE[];
+    static const char CAPTURE_MODE_EIS[];
 
     /**
      * Returns the the supported preview formats as an enum given in graphics.h

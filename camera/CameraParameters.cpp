@@ -98,6 +98,16 @@ const char CameraParameters::TRUE[] = "true";
 const char CameraParameters::FALSE[] = "false";
 const char CameraParameters::FOCUS_DISTANCE_INFINITY[] = "Infinity";
 
+// Values for capture modes.
+const char CameraParameters::CAPTURE_MODE_NORMAL[] = "normal";
+const char CameraParameters::CAPTURE_MODE_CONTI_ZOE[] = "contizoe";
+const char CameraParameters::CAPTURE_MODE_CONTI_BURST[] = "contiburst";
+const char CameraParameters::CAPTURE_MODE_CONTI_BURST_ONE_SHOT[] = "contiburst-one-shot";
+const char CameraParameters::CAPTURE_MODE_HDR[] = "hdr";
+const char CameraParameters::CAPTURE_MODE_PANORAMA[] = "panorama";
+const char CameraParameters::CAPTURE_MODE_ZOE[] = "zoe";
+const char CameraParameters::CAPTURE_MODE_EIS[] = "eis";
+
 // Values for white balance settings.
 const char CameraParameters::WHITE_BALANCE_AUTO[] = "auto";
 const char CameraParameters::WHITE_BALANCE_INCANDESCENT[] = "incandescent";
@@ -179,7 +189,10 @@ const char CameraParameters::LIGHTFX_HDR[] = "high-dynamic-range";
 // HTC settings
 const char CameraParameters::SCENE_MODE_TEXT[] = "text";
 const char CameraParameters::KEY_SMILEINFO_BYFACE_SUPPORTED[] = "smileinfo-byface-supported";
+const char CameraParameters::KEY_CONTIBURST_TYPE[] = "contiburst-type";
+const char CameraParameters::KEY_CAPTURE_MODE[] = "capture-mode";
 const char CameraParameters::KEY_CONTI_BURST_STATE[] = "contiburst-state";
+const char CameraParameters::KEY_SUPPORTED_CAPTURE_MODES[] = "capture-mode-values";
 const char CameraParameters::CONTI_BURST_CAPTURING[] = "contiburst-capturing";
 const char CameraParameters::CONTI_BURST_CAPTURE_DONE[] = "contiburst-done";
 const char CameraParameters::KEY_FORCE_USE_AUDIO_ENABLED[] = "forceuseaudio";

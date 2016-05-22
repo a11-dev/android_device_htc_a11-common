@@ -44,6 +44,21 @@ on init
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
 
+# HTC SSD Battery - BEGIN
+    chown system system /sys/class/power_supply/battery/full_level_dis_batt_chg
+    chmod 0220 /sys/class/power_supply/battery/full_level_dis_batt_chg
+    chown radio radio /sys/class/power_supply/battery/phone_call
+    chmod 0660 /sys/class/power_supply/battery/phone_call
+    chown media media /sys/class/power_supply/battery/play_music
+    chmod 0220 /sys/class/power_supply/battery/play_music
+    chown radio radio /sys/class/power_supply/battery/network_search
+    chmod 0220 /sys/class/power_supply/battery/network_search
+    chown system system /sys/class/power_supply/battery/navigation
+    chmod 0220 /sys/class/power_supply/battery/navigation
+    chown system system /sys/class/power_supply/battery/disable_limit_chg
+    chmod 0220 /sys/class/power_supply/battery/disable_limit_chg
+# HTC SSD Battery - END
+
 # HTC SSD Peripheral UI - BEGIN
     # LSM330 Gyro
     chown system system /sys/devices/virtual/ST_gyr/gyr/enable_device

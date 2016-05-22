@@ -220,3 +220,6 @@ vendor/lib/libWVStreamControlAPI_L3.so
 vendor/lib/libwvdrm_L3.so
 vendor/lib/libwvm.so
 vendor/lib/mediadrm/libwvdrmengine.so
+
+# Other
+vendor/lib/libqti-perfd-client.so

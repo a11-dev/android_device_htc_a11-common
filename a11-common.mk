@@ -178,11 +178,8 @@ PRODUCT_PACKAGES += \
 
 # Shim
 PRODUCT_PACKAGES += \
-    libshim_qcopt
-
-# Symbols
-PRODUCT_PACKAGES += \
-    libhtc_symbols
+    libshim_qcopt \
+    libshim_legsym
 
 # RIL
 PRODUCT_PACKAGES += \

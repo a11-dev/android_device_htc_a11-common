@@ -55,3 +55,17 @@ LOCAL_MODULE := libshim_sensors
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
+
+# legacy symbols for the camera
+
+include $(CLEAR_VARS)
+
+LOCAL_SRC_FILES := legacy_symbols.cpp
+
+LOCAL_SHARED_LIBRARIES := libbinder libgui
+
+LOCAL_MODULE := libshim_legsym
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+
+include $(BUILD_SHARED_LIBRARY)

@@ -180,6 +180,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_qcopt
 
+# Symbols
+PRODUCT_PACKAGES += \
+    libhtc_symbols
+
 # RIL
 PRODUCT_PACKAGES += \
     librmnetctl \

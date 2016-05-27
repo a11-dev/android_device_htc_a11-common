@@ -56,7 +56,7 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
-# legacy symbols for the camera
+# legacy symbols (for the camera)
 
 include $(CLEAR_VARS)
 

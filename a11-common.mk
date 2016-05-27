@@ -179,6 +179,7 @@ PRODUCT_PACKAGES += \
 # Shim
 PRODUCT_PACKAGES += \
     libshim_qcopt \
+    libshim_sensors \
     libshim_legsym
 
 # RIL

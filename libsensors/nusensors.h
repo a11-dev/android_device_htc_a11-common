@@ -37,8 +37,11 @@ int init_nusensors(hw_module_t const* module, hw_device_t** device);
 
 #define ARRAY_SIZE(a) (sizeof(a) / sizeof(a[0]))
 
-#define ID_A	(0)
-#define ID_B	(1)
+#define ID_A  (0)
+#define ID_M  (1)
+#define ID_O  (2)
+#define ID_P  (3)
+#define ID_L  (4)
 
 /*****************************************************************************/
 
@@ -49,11 +52,15 @@ int init_nusensors(hw_module_t const* module, hw_device_t** device);
 /*****************************************************************************/
 
 #define DEVICE_NAME      "/dev"
+#define CM_DEVICE_NAME      "/dev/cm3602"
+#define LS_DEVICE_NAME      "/dev/lightsensor"
 
 #define EVENT_TYPE_ACCEL_X          ABS_X
 #define EVENT_TYPE_ACCEL_Y          ABS_Y
 #define EVENT_TYPE_ACCEL_Z          ABS_Z
 #define EVENT_TYPE_ACCEL_STATUS     ABS_WHEEL
+#define EVENT_TYPE_PROXIMITY        ABS_DISTANCE
+#define EVENT_TYPE_LIGHT            ABS_MISC
 
 // 256LSG/G
 #define LSG                         (256.0f)

@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 #include <hardware/sensors.h>
 #include <fcntl.h>
 #include <errno.h>
@@ -26,16 +27,19 @@
 
 #include <cutils/atomic.h>
 #include <cutils/log.h>
+#include <cstring>
 
 #include "nusensors.h"
+#include "LightSensor.h"
+#include "ProximitySensor.h"
 #include "BMA250.h"
 /*****************************************************************************/
 
 struct sensors_poll_context_t {
     struct sensors_poll_device_t device; // must be first
 
-        sensors_poll_context_t();
-        ~sensors_poll_context_t();
+    sensors_poll_context_t();
+    ~sensors_poll_context_t();
     int activate(int handle, int enabled);
     int setDelay(int handle, int64_t ns);
     int pollEvents(sensors_event_t* data, int count);
@@ -43,6 +47,8 @@ struct sensors_poll_context_t {
 private:
     enum {
         bma250           = 0,
+        light           = 1,
+        proximity       = 2,
         numSensorDrivers,
         numFds,
     };
@@ -57,6 +63,10 @@ private:
         switch (handle) {
             case ID_A:
             	return bma250;
+            case ID_O:
+                return proximity;
+            case ID_M:
+                return light;
         }
         return -EINVAL;
     }
@@ -66,6 +76,16 @@ private:
 
 sensors_poll_context_t::sensors_poll_context_t()
 {
+    mSensors[light] = new LightSensor();
+    mPollFds[light].fd = mSensors[light]->getFd();
+    mPollFds[light].events = POLLIN;
+    mPollFds[light].revents = 0;
+
+    mSensors[proximity] = new ProximitySensor();
+    mPollFds[proximity].fd = mSensors[proximity]->getFd();
+    mPollFds[proximity].events = POLLIN;
+    mPollFds[proximity].revents = 0;
+    
     mSensors[bma250] = new BMA250Sensor();
     mPollFds[bma250].fd = mSensors[bma250]->getFd();
     mPollFds[bma250].events = POLLIN;
@@ -193,8 +213,8 @@ int init_nusensors(hw_module_t const* module, hw_device_t** device)
     sensors_poll_context_t *dev = new sensors_poll_context_t();
     memset(&dev->device, 0, sizeof(sensors_poll_device_t));
 
-    dev->device.common.tag = HARDWARE_DEVICE_TAG;
-    dev->device.common.version  = 0;
+    dev->device.common.tag      = HARDWARE_DEVICE_TAG;
+    dev->device.common.version  = SENSORS_DEVICE_API_VERSION_0_1;
     dev->device.common.module   = const_cast<hw_module_t*>(module);
     dev->device.common.close    = poll__close;
     dev->device.activate        = poll__activate;

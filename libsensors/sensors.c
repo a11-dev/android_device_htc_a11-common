@@ -28,7 +28,7 @@ static const struct sensor_t sSensorList[] = {
 	{
 		.name		= "BMA250 3-axis Accelerometer",
 		.vendor		= "Bosch Sensortec GmbH",
-          	.version	= 1,
+        .version	= 1,
 		.handle		= SENSORS_HANDLE_BASE+ID_A,
 		.type		= SENSOR_TYPE_ACCELEROMETER,
 		.maxRange	= (16.0f*GRAVITY_EARTH),
@@ -36,7 +36,29 @@ static const struct sensor_t sSensorList[] = {
 		.power		= 0.003f,
 		.minDelay	= 0,
 		.reserved	= { }
-	}
+	},
+        {
+        .name = "CM3602 Proximity sensor",
+        .vendor = "Capella Microsystems",
+        .version = 1,
+        .handle = SENSORS_HANDLE_BASE+ID_P,
+        .type = SENSOR_TYPE_PROXIMITY,
+        .maxRange = PROXIMITY_THRESHOLD_CM,
+        .resolution = PROXIMITY_THRESHOLD_CM,
+        .power = 0.5f,
+        .reserved = {}
+	},
+        {
+        .name = "CM3602 Light sensor",
+        .vendor = "Capella Microsystems",
+        .version = 1,
+        .handle = SENSORS_HANDLE_BASE+ID_L,
+        .type = SENSOR_TYPE_LIGHT,
+        .maxRange = 10240.0f,
+        .resolution = 1.0f,
+        .power = 0.5f,
+        .reserved = {}
+	 },
 };
 
 static int open_sensors(const struct hw_module_t* module, const char* name,
